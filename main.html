@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-do lista</title>
+    <link rel="icon" href="assets/logo.png" type="image" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <section class="sidebar" id="sidebar">
+      <div class="header">
+        <img src="assets/logo.png" alt="website logo" class="logo" />
+        <h3 class="logo-title">To-Do Lista</h3>
+      </div>
+      <div class="nav">
+        <div class="icon-1 icons" onclick="window.location.href = 'main.html'">
+          <img src="assets/home.png" alt="home icon" />
+          <p class="icon-name">Home</p>
+        </div>
+      </div>
+      <div class="side-footer">
+        <span class="copyright">&copy;Mohammed Ramadan</span>
+      </div>
+    </section>
+    <section class="home-section">
+      <div class="home-header">
+        <div id="burger-icon">
+          <i class="fa-solid fa-bars-staggered" id="bar"></i>
+        </div>
+        <h1 class="home-title">Home</h1>
+        <img src="assets/man.jpg" alt="profile picture" class="profile" />
+      </div>
+      <div id="close-icon">
+        <i class="fa-solid fa-x" id="close-bar"></i>
+      </div>
+      <div class="section-container">
+        <section class="section add-your-tasks">
+          <h2 class="add-title">Add Tasks Here !!</h2>
+          <!-- input add task -->
+          <input
+            type="text"
+            name="addTasks"
+            id="add-tasks"
+            placeholder="what is your task for today ?"
+          />
+          <div class="container">
+            <!-- input date -->
+            <input type="date" id="task-date" />
+            <!-- add priority -->
+            <div class="priority">
+              <div class="select" id="select">
+                <span class="selected" id="selected"
+                  ><i class="fas fa-flag"></i> Priority</span
+                >
+                <div class="caret"></div>
+              </div>
+              <ul class="list">
+                <li class="high" id="high">
+                  <i class="fas fa-flag high"></i>
+                  <span class="high">High Priority</span>
+                </li>
+                <li class="medium" id="medium">
+                  <i class="fas fa-flag medium"></i>
+                  <span class="medium">Medium Priority</span>
+                </li>
+                <li class="low" id="low">
+                  <i class="fas fa-flag low"></i>
+                  <span class="low">Low Priority</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- add description to task -->
+          <textarea
+            name="description"
+            id="task-description"
+            cols="30"
+            rows="5"
+            placeholder="add your description task........."
+          ></textarea>
+          <!-- button to add tasks -->
+          <input type="button" value="Add" id="add-button" />
+        </section>
+        <section class="section your-tasks" id="your-tasks">
+          <h2 class="add-title">Your Tasks</h2>
+          <div id="card-container"></div>
+        </section>
+      </div>
+    </section>
+    <script src="js/main.js"></script>
+  </body>
+</html>
